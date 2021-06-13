@@ -1,0 +1,46 @@
+.modal-backdrop.in{
+    opacity: 0 !important;
+}
+.modal-open{
+    overflow: auto !important;
+}
+.video-civil{
+    position: fixed;
+    right: 0%;
+    top: 152px;
+    z-index: 2000;
+    width: 350px;
+    padding: .5em;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    background: #fff;
+    border-radius: .5em 0 0 .5em;
+}
+.video-civil video{
+    width: 100%;
+    float: right;
+}
+.video-civil ul li a {
+    display: inline-block;
+    font-size: 1.3em;
+    color: #fff;
+    background: #000;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-radius: .5em 0 0 .5em;
+    width: 3em;
+}
+#voto-titulo{
+    color: #fff;
+    -webkit-animation: example 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: example 1s infinite;
+    animation-direction: alternate;
+}
+@-webkit-keyframes example {
+    from {color: #fff;}
+    to {color: #d9534f;}
+}
+/* Standard syntax */
+@keyframes example {
+    from {color: #fff;}
+    to {color: #d9534f;}
+}

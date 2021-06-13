@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- Mirrored from csjjunin.gob.pe/web/audiencias by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Jun 2021 17:17:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Corte Superior de Justicia de Junin" content="Corte Superior de Justicia de Junin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bienvenidos al portal web institucional de la Corte Superior de Justicia de Junín; Consulta de Expedientes Judiciales; Capacitaciones y certificados; ">
+    <title>Corte Superior de Justicia de Junín - Poder Judicial del Perú</title>
+    <link rel="icon" href="../imagenes/logo.ico">
+    <link rel="stylesheet" href="../css/nuevo-estilo-websiteb791.css?id=ade0c1f3d2dbea06c90a">
+    </head>
+<body>
+<section id="web">
+        <link rel="stylesheet" href="../css/librerias/toastr3884.css?id=a7500efccf8ec55dd912">
+    
+    <section class="contenido" id="programacion-audiencias">
+        <div class="container">
+            
+            <article class="section-servicios-internos col-lg-12 col-sm-12 col-xs-12">
+                <article class="contenido-enlaces-externos col-lg-12 col-sm-12 col-xs-12">
+
+                    <div class="col-lg-12" v-cloak>
+                        <div class="col-lg-12"  style="margin-top: 20px">
+                            <fieldset class="col-sm-9 col-sm-offset-1">
+                                <div class="col-sm-2 col-sm-offset-1" style="padding: 0 2px">
+                                    <input v-model="usuario.data1" class="form-control text-center" maxlength="5" minlength="5" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);">
+                                </div>
+                                <div class="col-sm-2" style="padding: 0 2px">
+                                    <input v-model="usuario.data2" class="form-control text-center" maxlength="4" minlength="4" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);">
+                                </div>
+                                <div class="col-sm-2" style="padding: 0 2px">
+                                    <input v-model="usuario.data3" class="form-control text-center" maxlength="4" minlength="1" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);">
+                                </div>
+                                <div class="col-sm-2" style="padding: 0 2px">
+                                    <input v-model="usuario.data4" class="form-control text-center" maxlength="4" minlength="4" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);">
+                                </div>
+                                <div class="col-sm-1" style="padding: 0 2px">
+                                    <input v-model="usuario.data5" @input="mayuscula($event, usuario, 'data5')" class="form-control text-center" maxlength="2" minlength="2" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);padding: 6px;">
+                                </div>
+                                <div class="col-sm-1" style="padding: 0 2px">
+                                    <input v-model="usuario.data6" @input="mayuscula($event, usuario, 'data6')" class="form-control text-center" maxlength="2" minlength="2" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);padding: 6px;">
+                                </div>
+                                <div class="col-sm-1" style="padding: 0 2px">
+                                    <input v-model="usuario.data7" class="form-control text-center" maxlength="2" minlength="2" type="text" style="color: rgb(28, 47, 89);border-left: 1px solid rgb(204, 204, 204);padding: 6px;">
+                                </div>
+                                <img class="col-sm-11 col-sm-offset-1 img-responsive" src="../imagenes/expediente.png" alt="programacion">
+                            </fieldset>
+                            <a class="btn btn-success pull-left" @click="getDatos()"><i class="fa fa-search"></i> Buscar</a>
+                        </div>
+                        <div v-if="loader">
+                            <div class="text-center col-xs-2 col-xs-offset-5 loading">
+                                <div id="loader">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-if="mostrar" v-for="data in datos" class="col-lg-12 section-audiencias mySlides">
+                            <div class="col-lg-12 text-center audiencia-titulo">
+                                <h2>{{ data.x_descripcion_sala }}</h2>
+
+                                <div class="col-lg-12 audiencia-divisor">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="col-lg-12">
+                                        <fieldset class="col-lg-12">
+
+
+
+                                            <div class="form-group col-lg-12 text-center" style="font-size: 1.5em;">
+                                                <label style="color: #fff;">Exp. {{ data.x_formato }}</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 audiencia-divisor">
+                                <div class="col-lg-12">
+                                    <fieldset class="col-lg-4">
+                                        <legend class="text-center">FECHA</legend>
+                                        <div class="text-center form-group col-lg-2 audiencia-icono">
+                                            <span class="fa fa-calendar"></span>
+                                        </div>
+                                        <div class="form-group col-lg-10" style="font-size: 1.5em;">
+                                            <label>{{ data.f_audiencia }}</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="col-lg-4">
+                                        <legend class="text-center">HORA INICIO</legend>
+                                        <div class="text-center form-group col-lg-2 audiencia-icono">
+                                            <span class="fa fa-clock-o"></span>
+                                        </div>
+                                        <div class="form-group col-lg-10" style="font-size: 1.5em;">
+                                            <label>{{ data.f_ini_audiencia }}</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="col-lg-4">
+                                        <legend class="text-center">HORA FIN</legend>
+                                        <div class="text-center form-group col-lg-2 audiencia-icono">
+                                            <span class="fa fa-clock-o"></span>
+                                        </div>
+                                        <div class="form-group col-lg-10" style="font-size: 1.5em;">
+                                            <label>{{ data.f_fin_audiencia }}</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </div>
+    </section>
+</section>
+<footer>
+</footer>
+<script src="../js/publicLayout0c09.js?id=e1a3686fe2d83466cde7"></script>
+<script src="../js/Presentacion/nuevo-estilo-websitef84e.js?id=ec698939bbc5883b8188"></script>
+    
+    <script src="../js/librerias/toastr84a4.js?id=c653a6101b6eccf45aaa"></script>
+    <script src="../js/PagWeb/Presentacion/audiencias8494.js?id=fd66ea91d39a64bb83b8"></script>
+</body>
+
+<!-- Mirrored from csjjunin.gob.pe/web/audiencias by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Jun 2021 17:17:30 GMT -->
+</html>
