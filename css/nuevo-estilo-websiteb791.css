@@ -6849,6 +6849,10 @@ h1, h2, h3, h4, h5 ,h6{
     font-family: "Helvetica";
     color: #0a0f47;
 }
+.color-guinda{
+  font-family: "Helvetica";
+  color: #780D0D;
+}
 /*COLORES*/
 .color-blanco{
   font-family: "Helvetica";
@@ -6875,8 +6879,8 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .icono-barra{
     margin-left: 0.5em;
-    font-size: 0.7em;
-    color: #252b65;
+    font-size: 0.9em;
+    color: #65253e;
 }
 .icono-barra-xs{
     font-size: 0.7em;
@@ -6889,7 +6893,7 @@ h1, h2, h3, h4, h5 ,h6{
     border-radius: 50%;
 }
 .icono-barra i{
-    background: #252b65;
+    background: #780D0D;
     color: #fff;
     padding: 0.7em;
     border-radius: 50%;
@@ -7189,7 +7193,7 @@ h1, h2, h3, h4, h5 ,h6{
 /*------- FOOTER --------*/
 
 footer{
-    background: #252B65;
+    background: #780D0D;
 }
 .contenido-footer{
     margin: 2em 0;
