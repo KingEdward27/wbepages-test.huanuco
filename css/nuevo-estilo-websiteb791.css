@@ -7962,7 +7962,7 @@ footer{
     margin: 0 10px;color: #d00000;
 }
 .sub-servicio-boton{
-    height: 100px;
+    height: 120px;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 50% 50%;
